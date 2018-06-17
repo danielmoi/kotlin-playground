@@ -1,4 +1,4 @@
-package Animal
+package Animal1
 
 fun main(args: Array<String>) {
     makeAnimal()
@@ -9,7 +9,6 @@ fun makeAnimal() {
 
     val animal1 = Bear()
     println("-----------------")
-    println("animal1 name: ${animal1.name}")
     println("animal1 planet: ${animal1.planet}")
     println("animal1 hasCells: ${animal1.hasCells}")
     println("animal1 color: ${animal1.color}")
@@ -17,7 +16,6 @@ fun makeAnimal() {
 
     var animal2 = SunBear()
     println("-----------------")
-    println("animal2 name: ${animal2.name}")
     println("animal2 planet: ${animal2.planet}")
     println("animal2 hasCells: ${animal2.hasCells}")
     println("animal2 color: ${animal2.color}")
@@ -50,7 +48,7 @@ abstract class Animal {
 
 // this animalType has a constructor, and thus must be initialized here
 class Bear : Animal() {
-    // "color" hides member of superanimalType "Animal"
+    // "color" hides member of superType "Animal"
     // and needs "override" modifier
     override val color = "brown"
 
