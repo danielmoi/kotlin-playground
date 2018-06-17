@@ -28,6 +28,8 @@ interface AnimalColor {
 }
 
 // a Class, which only has ONE INSTANCE, and is instantiated as ColorBrown
+// an "object class" (?) / "singleton"?
+// all calls to the ColorBrown Interface/Class will be DEFERRED to the OBJECT ColorBrown
 object ColorBrown: AnimalColor {
     override val color: String = "brown"
 }
