@@ -26,7 +26,7 @@ abstract class Animal {
     abstract  val label: String
 }
 
-data class Bear(val name: String): Animal() {
+class Bear(val name: String): Animal() {
     override val label = "bear"
 
 }
@@ -42,6 +42,7 @@ fun print(instance: Any) {
     }
 }
 
+// https://gist.github.com/DavidSanf0rd/9725485155bc0c4c681eb038b21c457a
 fun readProperties(instance: Any) {
     val klass = instance.javaClass.kotlin
     klass.declaredMemberProperties.forEach {
