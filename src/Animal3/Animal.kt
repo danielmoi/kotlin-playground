@@ -17,10 +17,10 @@ fun makeAnimal() {
 fun print(instance: Any) {
     println("--------------")
     readProperties(instance)
-    println("--------------")
 }
 
 fun readProperties(instance: Any) {
+    // will not print out Animal.hasCells (Animal is the superclass of Bear)
     instance.javaClass.kotlin.declaredMemberProperties.forEach {
         println("${it.name.padEnd(13)} -> ${it.get(instance)}")
     }
