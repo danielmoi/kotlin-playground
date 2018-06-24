@@ -1,23 +1,31 @@
-package Fruit1
+package Fruit2
 
-// Data Classes are great for printing!
-// They have a built-in toString() for the PROPERTIES on a class
+// Data Classes can still have methods
 
 fun main(args: Array<String>) {
     val basket1 = NormalBasket(fruit = "Oranges", count = 2)
     println("basket1: ${basket1}")
+    basket1.getCount()
 
     val basket2 = DataBasket(fruit = "Lemons", count = 10)
     println("basket2: ${basket2}")
+    basket2.getCount()
 }
 
 data class DataBasket(val fruit: String, val count: Int) {
     val name = "Data Basket"
+
+    fun getCount() = println("count: ${count}")
 }
 
-class NormalBasket(val fruit: String, val count: Int)
+class NormalBasket(val fruit: String, val count: Int) {
+    fun getCount() = println("count: ${count}")
+
+}
 
 /*
-    basket1: Fruit1.NormalBasket@34340fab
+    basket1: Fruit2.NormalBasket@34340fab
+    count: 2
     basket2: DataBasket(fruit=Lemons, count=10)
- */
+    count: 10
+*/
