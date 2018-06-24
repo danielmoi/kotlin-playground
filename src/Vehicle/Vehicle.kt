@@ -5,7 +5,7 @@ fun main(args: Array<String>) {
     car1.start()
     car1.accelerate()
     car1.stuntMove.go()
-    
+
     println("----------")
 
     val car2 = Car(make = "Holden", color = Red, stuntMove = Donut)
@@ -53,6 +53,10 @@ interface StuntMove {
     val name: String
     fun go()
 }
+// Singleton = Burnout is a class that implements StuntMove, but there is only
+// "Burnout", so we enforce only being able to instantiate Burnout once
+// Kotlin instantiates Burnout for us - we can use it as "Burnout", instead of
+// `burnout = Burnout()`
 object Burnout: StuntMove {
     override val name: String
         get() = "Burnout"
